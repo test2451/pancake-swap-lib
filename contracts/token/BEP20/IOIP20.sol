@@ -2,7 +2,7 @@
 
 pragma solidity >=0.4.0;
 
-interface IBEP20 {
+interface IOIP20 {
     /**
      * @dev Returns the amount of tokens in existence.
      */
