@@ -2,26 +2,26 @@
 
 pragma solidity >=0.5.0;
 
-import '../utils/SafeBEP20Namer.sol';
+import '../utils/SafeOIP20Namer.sol';
 
 // used for testing the logic of token naming
-contract SafeBEP20NamerTest {
+contract SafeOIP20NamerTest {
     function tokenSymbol(address token) public view returns (string memory) {
-        return SafeBEP20Namer.tokenSymbol(token);
+        return SafeOIP20Namer.tokenSymbol(token);
     }
 
     function tokenName(address token) public view returns (string memory) {
-        return SafeBEP20Namer.tokenName(token);
+        return SafeOIP20Namer.tokenName(token);
     }
 }
 
 // does not implement name or symbol
-contract NamerTestFakeOptionalBEP20 {
+contract NamerTestFakeOptionalOIP20 {
 
 }
 
-// complies with BEP20 and returns strings
-contract NamerTestFakeCompliantBEP20 {
+// complies with OIP20 and returns strings
+contract NamerTestFakeCompliantOIP20 {
     string public name;
     string public symbol;
 
@@ -32,7 +32,7 @@ contract NamerTestFakeCompliantBEP20 {
 }
 
 // implements name and symbol but returns bytes32
-contract NamerTestFakeNoncompliantBEP20 {
+contract NamerTestFakeNoncompliantOIP20 {
     bytes32 public name;
     bytes32 public symbol;
 
