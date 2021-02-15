@@ -23,7 +23,7 @@ contract PairNamerTest {
     }
 }
 
-// we do not test with non compliant BEP20 implementations because that's handled by token namer
+// we do not test with non compliant OIP20 implementations because that's handled by token namer
 contract PairNamerTestFakeToken {
     string public name;
     string public symbol;
